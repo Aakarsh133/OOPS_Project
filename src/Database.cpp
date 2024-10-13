@@ -12,12 +12,12 @@ void Database::addTable(Table* table) {
     tables.push_back(table);
 }
 
-void Database::displayTables() const {
+/*void Database::displayTables() const {
     for (const auto& table : tables) {
         cout << "Table: " << table->getTableName() << endl;
         table->display();
     }
-}
+}*/
 
 // Save all tables in the database to separate files
 void Database::saveAllTablesToFile() const {
