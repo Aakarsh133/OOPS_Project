@@ -22,7 +22,7 @@ void Database::displayTables() const {
 // Save all tables in the database to separate files
 void Database::saveAllTablesToFile() const {
     for (const auto& table : tables) {
-        string filename = "data/" + table->getTableName() + ".txt";
+        string filename = "../data/" + table->getTableName() + ".txt";
         table->saveToFile(filename);
         cout << "Table " << table->getTableName() << " saved to " << filename << endl;
     }
@@ -31,7 +31,7 @@ void Database::saveAllTablesToFile() const {
 // Load all tables from their respective files
 void Database::loadAllTablesFromFile() {
     for (auto& table : tables) {
-        string filename = "data/" + table->getTableName() + ".txt";
+        string filename = "../data/" + table->getTableName() + ".txt";
         table->loadFromFile(filename);
         cout << "Table " << table->getTableName() << " loaded from " << filename << endl;
     }
